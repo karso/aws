@@ -1,0 +1,5 @@
+#!/bin/sh
+apt-get -y install ansible
+wget -O /tmp/localhost_install_nginx.yml https://s3.amazonaws.com/vimruls-bucket/localhost_install_nginx.yml
+ansible-playbook -i 'localhost ansible_connection=local,' /tmp/localhost_install_nginx.yml
+
